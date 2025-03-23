@@ -20,7 +20,7 @@ function Login() {
       <input type="password" placeholder= "Type your password" />
       <br />
       <button type="submit" onClick={handleSubmit}>Submit</button>
-      <p className='signup'>Don't have an account? <Link to="#">Sign Up</Link> </p>
+      <p className='signup'>Don't have an account? <Link to="/signup">Sign Up</Link> </p>
       </form>
     </div>
     </div>

@@ -14,7 +14,7 @@ function SignUp() {
     <div className='login-container'>
       <h1>SignUp</h1>
       <form >
-        <label htmlFor="l1">Name</label><br />
+        <label htmlFor="l1" className=''>Name</label><br />
       <input id="l1" type="text" placeholder='type your name' /><br />
       <label  htmlFor="l3">Phone</label><br />
       <input id="l3" type="text" placeholder= "Phone" />
@@ -26,7 +26,7 @@ function SignUp() {
       <input id="l4" type="password" />
       <br />
       <button type="submit" onClick={handleSubmit}>Submit</button>
-      <p className='signup'>Already have an account? <Link to="#">Login</Link> </p>
+      <p className='signup'>Already have an account? <Link to="/login">Login</Link> </p>
       </form>
     </div>
     </div>
