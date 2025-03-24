@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-
+import { logoutUser,loginUser } from "./user";
 const  AuthContext =createContext()
 
 export function useAuth(){
@@ -13,22 +13,40 @@ export const AuthProvider=({children})=>{
     useEffect(() =>{
 
     },[])
- function Login(user){
-    if(user){
+const login=async(credentials)=>{
+    setLoading(true);
+    try{
+        const user =await loginUser(credentials);
         setCurrentUser(user)
         setUserIsLoggedIn(true)
-        
     }
-    else{
+    catch(err){
+        console.error('Login failed: ', err)
         setCurrentUser(null)
         setUserIsLoggedIn(false)
+    } 
+    finally{
+        setLoading(false)
     }
-    setLoading(false)
  }
+ const logout = async () => {
+    setLoading(true);
+    try {
+        await logoutUser();
+        setCurrentUser(null);
+        setUserIsLoggedIn(false);
+    } catch (error) {
+        console.error('Logout failed:', error);
+    } finally {
+        setLoading(false);
+    }
+}
     const value = {
         currentUser,
         userIsLoggedIn,
-        loading
+        loading,
+        logout,
+        login
     }
     return <AuthContext.Provider value={value}>
         {!loading && children}
