@@ -1,11 +1,12 @@
-import { AirplaneTicket, Event, Search } from '@mui/icons-material';
-import { Button, FormControl, Input, TextField } from '@mui/material';
-import React from 'react';
+import { Search } from '@mui/icons-material';
+import { Button, FormControl, Input} from '@mui/material';
+import React, { useState } from 'react';
 import './navbar.css'
 
 function Navbar(props) {
+    const [search,setSearch]=useState('')
     return (
-        <div className='py-4'>
+        <div className='py-4 fixed w-full bg-white z-50'>
             <div className='max-w-[80%] flex mx-auto justify-between items-center'>
                 <div className='logo max-w-[15%]'>
                     <p className='text-2xl font-extrabold'>Eve<span className='text-blue-500'>n</span><span className='text-blue-500'>t</span>ix  </p>
@@ -16,11 +17,13 @@ function Navbar(props) {
                         <li>Contact Us</li>
                         <li>Create Event</li>
                     </ul>
-                    <FormControl className='relative'>
+                    <FormControl sx={{display:{md:'flex',sm:'none'}}} className='relative'>
                         <Input
                             name='search'
                             placeholder='Search event'
                             className='border rounded-full border-gray-400 px-5 pl-8 mb-0 text-center '
+                            value={search}
+                            onChange={(e)=>{setSearch(e.target.value)}}
                         />
                         <Search className='absolute top-2 left-3' fontSize='12px' color='disabled' />
                     </FormControl>

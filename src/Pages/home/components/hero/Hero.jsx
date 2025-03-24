@@ -1,9 +1,11 @@
-import React from 'react';
-import HeroImage from '../../../../Assets/image2.jpg'
+import React, { useState } from 'react';
+// import HeroImage from '../../../../Assets/image2.jpg'
 import './hero.css'
-import { Button, Chip } from '@mui/material';
+import {Button, Chip,FormControl, Input, } from '@mui/material';
+import { Search } from '@mui/icons-material';
 
 function Hero(props) {
+    const [search,setSearch]=useState('')
     return (
         <div className='w-[100%] h-[85vh] hero'>
             <div className='bg-[#000000a6] w-full h-full flex items-center text-white'>
@@ -21,9 +23,19 @@ function Hero(props) {
                         <Chip label="Concerts" color='info' variant='filled' />
                         <Chip label="Seminars" color='secondary' variant='filled' />
                     </div>
+                    <FormControl sx={{display:{md:'none',sm:'flex'}}} className='relative'>
+                        <Input
+                            name='search'
+                            placeholder='Search event'
+                            className='border rounded-full border-gray-400 px-5 pl-8 mb-0 text-center bg-white my-6'
+                            value={search}
+                            onChange={(e)=>{setSearch(e.target.value)}}
+                        />
+                        <Search className='absolute top-2 left-3' fontSize='12px' color='disabled' />
+                        <Button sx={{borderRadius:'25px',mt:1}} variant='contained'>Search<Search/></Button>
+                    </FormControl>
                 </div>
             </div>
-            {/* <img src={HeroImage} className='w-full h-full object-fill' alt='hero image'/> */}
         </div>
     );
 }
