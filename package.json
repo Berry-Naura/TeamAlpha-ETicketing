@@ -15,9 +15,12 @@
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "axios": "^1.7.9",
+    "formik": "^2.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.4.0"
+    "react-router-dom": "^7.4.0",
+    "vercel": "^41.4.1",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
