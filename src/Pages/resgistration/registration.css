@@ -1,7 +1,4 @@
-body{
-    /* margin: 5rem 20rem; */
-    /* background: linear-gradient(to right,rgb(76, 160, 193),rgb(134, 205, 229),rgb(215, 63, 193)); */
-}
+
 .error{
     color: red;
     font-size: 1rem;
@@ -55,10 +52,7 @@ h1{
     .login-container button{
         width: 80%;
     }
-    body{
-        margin: 10px;
-        background: linear-gradient(to right,rgb(76, 160, 193),rgb(134, 205, 229),rgb(215, 63, 193));
-    }
+    
     .login-container{
         max-width: 70%;
         height: fit-content;
