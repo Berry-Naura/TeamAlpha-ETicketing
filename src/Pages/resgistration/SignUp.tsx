@@ -49,22 +49,22 @@ function SignUp() {
         {({handleSubmit,dirty,isValid}) => (
       <Form  onSubmit={handleSubmit}>
         <label htmlFor="l1">Name</label><br />
-      <Field id="l1" type="text" name="name" placeholder='type your name' /><br />
+      <Field className="input" id="l1" type="text" name="name" placeholder='type your name' /><br />
       <ErrorMessage name="name" component="div" className="error" />  
       <label  htmlFor="l3">Phone</label><br />
-      <Field id="l3" name="phone" type="text" placeholder= "Phone" />
+      <Field className="input" id="l3" name="phone" type="text" placeholder= "Phone" />
       <ErrorMessage name="phone" component="div" className="error" />
       <br />
       <label htmlFor="l2">Email</label><br />
-      <Field id="l2" type="email" name="email" placeholder= "example@gmail.com" />
+      <Field className="input" id="l2" type="email" name="email" placeholder= "example@gmail.com" />
       <ErrorMessage name="email" component="div" className="error" />
       <br />
       <label htmlFor="l4">Password</label><br />
-      <Field id="l4" name="password" type="password" />
+      <Field className="input" id="l4" name="password" type="password" />
       <ErrorMessage name="password" component="div" className="error" />
       <br />
       <label htmlFor="l5">Confirm Password</label><br />
-      <Field id="l5" name="confirm_password" type="password" />
+      <Field className="input" id="l5" name="confirm_password" type="password" />
       <ErrorMessage name="confirm_password" component="div" className="error" />
       <br />
       <button type='submit' disabled={!isValid || !dirty || loading}>{loading? "SigningUp...":"Submit"}</button>

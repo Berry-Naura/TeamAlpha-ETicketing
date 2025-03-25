@@ -31,13 +31,13 @@ function Login() {
 
       >
         {({handleSubmit,isValid,dirty})=>(
-      <Form onSubmit={handleSubmit} >
+      <Form className="input" onSubmit={handleSubmit} >
         <label htmlFor="l1">Email</label><br />
-      <Field name="email" type="email" placeholder='Email' />
+      <Field className="input" name="email" type="email" placeholder='Email' />
       <ErrorMessage name='email' component="div" className='error' />
       <br />
       <label htmlFor="l2">Password</label><br />
-      <Field name="password" type="password" placeholder= "Type your password" />
+      <Field className="input" name="password" type="password" placeholder= "Type your password" />
       <ErrorMessage name='password' component="div" className='error' />
       <br />
       <button type="submit" disabled={!isValid || !dirty || loading} >{loading?"Logging in...":"Submit"}</button>
