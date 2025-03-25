@@ -18,10 +18,10 @@ function Hero(props) {
                         and hassle-free so you can focus on enjoying the experience
                     </p>
                     <div className='w-full flex justify-center items-center sm:gap-x-5 gap-x-2 mt-3.5'>
-                        <Chip label="Sports" color='success' variant='filled' />
-                        <Chip label="Theater" color='warning' variant='filled' />
-                        <Chip label="Concerts" color='info' variant='filled' />
-                        <Chip label="Seminars" color='secondary' variant='filled' />
+                        <Chip label="Sports" color='success' variant='filled' sx={{p:2.5,borderRadius:'25px'}} />
+                        <Chip label="Theater" color='warning' variant='filled' sx={{p:2.5,borderRadius:'25px'}} />
+                        <Chip label="Concerts" color='info' variant='filled' sx={{p:2.5,borderRadius:'25px'}} />
+                        <Chip label="Seminars" color='secondary' variant='filled' sx={{p:2.5,borderRadius:'25px'}} />
                     </div>
                     <FormControl sx={{display:{md:'none',sm:'flex'}}} className='relative'>
                         <Input
