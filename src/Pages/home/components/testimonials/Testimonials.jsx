@@ -32,8 +32,8 @@ function Testimonials(props) {
         <div className='sm:max-w-[80%] max-w-[90%] mx-auto pb-5'>
             <p className='text-3xl font-bold py-8 text-center font-[cursive]'>What our customers say</p>
             <div className='grid sm:grid-cols-3 gap-4'>
-            {reviews.map((review)=>(
-                <UserTestimonial review={review} />
+            {reviews.map((review,index)=>(
+                <UserTestimonial key={review.id?review.id:index} review={review} />
             ))}
             </div>
         </div>

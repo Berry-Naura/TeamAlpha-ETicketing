@@ -15,13 +15,13 @@ function UserTestimonial({review}) {
             <CardContent>
                 <Box sx={{display:'flex',alignItems:'center',columnGap:'.75em'}}>
                     <Avatar sx={{bgcolor:'orange'}} >{review.userName[0]}</Avatar>
-                    <Typography>
+                    <Box>
                         <Typography variant='body2' sx={{fontWeight:'bold'}}>{review.userName}</Typography>
                         <Typography variant='body2' sx={{color:'gray',fontSize:'12px'}}>{review.date}</Typography>
-                    </Typography>
+                    </Box>
                 </Box>
                 <Box sx={{py:2}}>
-                    <Typography>{getStars(review.rating).map((star)=>(<Star />))}</Typography>
+                    <Typography>{getStars(review.rating).map((star,index)=>(<Star key={index} />))}</Typography>
                     <Typography>{review.body}</Typography>
                 </Box>
             </CardContent>
